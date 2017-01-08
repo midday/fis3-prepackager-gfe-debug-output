@@ -1,0 +1,22 @@
+{
+    "name": "fis3-prepackager-gfe-debug-output",
+    "version": "1.0.0",
+    "description": "输出一份用于debug的页面",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/midday/fis3-prepackager-gfe-debug-output.git"
+    },
+    "keywords": [
+        "gfe",
+        "fis3",
+        "debug",
+        "output"
+    ],
+    "author": "midday",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/midday/fis3-prepackager-gfe-debug-output/issues"
+    },
+    "homepage": "https://github.com/midday/fis3-prepackager-gfe-debug-output#readme"
+}
