@@ -1,6 +1,6 @@
 {
     "name": "fis3-prepackager-gfe-debug-output",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "输出一份用于debug的页面",
     "main": "index.js",
     "repository": {

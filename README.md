@@ -12,7 +12,7 @@ npm install [-g] fis3-prepackager-gfe-debug-output
 
 ```js
 fis.match('::package', {
-    prepackager: fis.plugin('gfe-script-place',{
+    prepackager: fis.plugin('gfe-debug-output',{
     	debugDomain: '',默认值：//127.0.0.1
     	cssDomain: '//js.atguat.net.cn',//必须参数
     	jsDomain: '//css.atguat.com.cn'//必须参数
