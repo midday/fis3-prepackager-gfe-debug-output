@@ -17,7 +17,8 @@ module.exports = function(ret, conf, settings, opt) {
     var jsDomain = settings.jsDomain;
     //link标签和script标签正则表达式
     var linkAndScriptTagRegExp = /(<link[^>]*?href\s*=\s*('[^']*'|"[^"]*")[^>]*?\/?>)|(<script[^>]*?src=('[^']*'|"[^"]*")[^>]*?>\s*<\s*\/script\s*>)/gi;
-
+    //md5结尾串的正则
+    var md5RegExp = /_[a-z0-9]{7}\./;
     Object.keys(src).forEach(function(key) {
         var fileInfo = src[key];
         var fileExt = fileInfo.rExt;
@@ -28,7 +29,7 @@ module.exports = function(ret, conf, settings, opt) {
             var pkg = fis.file.wrap(fileInfo.realpathNoExt + '-debug' + fileExt);
             //替换js域名或css域名为debug域名
             fileContent = fileContent.replace(linkAndScriptTagRegExp, function(matchTag) {
-                return matchTag.replace(cssDomain, debugDomain).replace(jsDomain, debugDomain);
+                return matchTag.replace(cssDomain, debugDomain).replace(jsDomain, debugDomain).replace(md5RegExp,'.');
             });
 
             pkg.setContent(fileContent);
