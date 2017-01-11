@@ -10,7 +10,7 @@
 module.exports = function(ret, conf, settings, opt) {
     var src = ret.src;
     //debug域名
-    var debugDomain = settings.debugDomain ? settings.debugDomain : '//127.0.0.1:10000';
+    var debugDomain = settings.debugDomain || '//127.0.0.1:10000';
     //css域名
     var cssDomain = settings.cssDomain;
     //js域名
